@@ -1,0 +1,721 @@
+//Microsoft Developer Studio generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)\r\n"
+    "#ifdef _WIN32\r\n"
+    "LANGUAGE 9, 1\r\n"
+    "#pragma code_page(1252)\r\n"
+    "#endif //_WIN32\r\n"
+    "#include ""res\\MyDigClock.rc2""  // non-Microsoft Visual C++ edited resources\r\n"
+    "#include ""afxres.rc""         // Standard components\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON    DISCARDABLE     "res\\MyDigClock.ico"
+IDI_ON                  ICON    DISCARDABLE     "res\\LIGHTON.ICO"
+IDI_OFF                 ICON    DISCARDABLE     "res\\LIGHTOFF.ICO"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ABOUTBOX DIALOG DISCARDABLE  0, 0, 160, 92
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "About MyDigClock"
+FONT 8, "Fixedsys"
+BEGIN
+    ICON            IDR_MAINFRAME,IDC_STATIC,11,17,20,20
+    LTEXT           "My Clock Reminder",IDC_STATIC,45,13,69,8,SS_NOPREFIX
+    DEFPUSHBUTTON   "OK",IDOK,55,71,50,14,BS_FLAT | WS_GROUP
+    LTEXT           "Version 1.2",IDC_STATIC,57,25,45,8
+    LTEXT           "made by ELY M.",IDC_STATIC,51,37,57,8
+    CTEXT           "http://bmx3r.com",IDC_URL,48,49,65,8,SS_NOTIFY
+END
+
+IDD_MYDIGCLOCK_DIALOG DIALOGEX 0, 0, 306, 415
+STYLE DS_MODALFRAME | WS_MINIMIZEBOX | WS_MAXIMIZEBOX | WS_POPUP | 
+    WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_APPWINDOW
+CAPTION "My Clock Reminder"
+FONT 8, "Fixedsys"
+BEGIN
+    EDITTEXT        IDC_CLOCK,75,15,108,14,ES_CENTER | ES_READONLY | NOT 
+                    WS_BORDER
+    EDITTEXT        IDC_HOUR,88,50,17,13,ES_AUTOHSCROLL | ES_NUMBER
+    EDITTEXT        IDC_MINUTES,112,50,27,13,ES_AUTOHSCROLL | ES_NUMBER,
+                    WS_EX_TRANSPARENT
+    PUSHBUTTON      "Set Reminders",IDC_SETALARM,97,289,64,14
+    EDITTEXT        IDC_NAME,37,50,44,14,ES_AUTOHSCROLL
+    LTEXT           "Title",IDC_STATIC,46,38,21,8
+    LTEXT           "Time",IDC_STATIC,110,38,17,8
+    LTEXT           ":",IDC_STATIC,106,53,8,8
+    EDITTEXT        IDC_HOUR2,88,68,17,13,ES_AUTOHSCROLL | ES_NUMBER
+    EDITTEXT        IDC_MINUTES2,112,68,27,13,ES_AUTOHSCROLL | ES_NUMBER,
+                    WS_EX_TRANSPARENT
+    EDITTEXT        IDC_NAME2,37,68,44,14,ES_AUTOHSCROLL
+    LTEXT           ":",IDC_STATIC,106,142,8,8
+    EDITTEXT        IDC_HOUR3,88,86,17,13,ES_AUTOHSCROLL | ES_NUMBER
+    EDITTEXT        IDC_MINUTES3,112,86,27,13,ES_AUTOHSCROLL | ES_NUMBER,
+                    WS_EX_TRANSPARENT
+    EDITTEXT        IDC_NAME3,37,86,44,14,ES_AUTOHSCROLL
+    LTEXT           ":",IDC_STATIC,106,89,8,8
+    EDITTEXT        IDC_HOUR6,88,140,17,13,ES_AUTOHSCROLL | ES_NUMBER
+    EDITTEXT        IDC_MINUTES6,112,140,27,13,ES_AUTOHSCROLL | ES_NUMBER,
+                    WS_EX_TRANSPARENT
+    EDITTEXT        IDC_NAME6,37,140,44,14,ES_AUTOHSCROLL
+    LTEXT           ":",IDC_STATIC,106,71,8,8
+    EDITTEXT        IDC_HOUR5,88,122,17,13,ES_AUTOHSCROLL | ES_NUMBER
+    EDITTEXT        IDC_MINUTES5,112,122,27,13,ES_AUTOHSCROLL | ES_NUMBER,
+                    WS_EX_TRANSPARENT
+    EDITTEXT        IDC_NAME5,37,122,44,14,ES_AUTOHSCROLL
+    LTEXT           ":",IDC_STATIC,106,125,8,8
+    EDITTEXT        IDC_HOUR4,88,104,17,13,ES_AUTOHSCROLL | ES_NUMBER
+    EDITTEXT        IDC_MINUTES4,112,104,27,13,ES_AUTOHSCROLL | ES_NUMBER,
+                    WS_EX_TRANSPARENT
+    EDITTEXT        IDC_NAME4,37,104,44,14,ES_AUTOHSCROLL
+    LTEXT           ":",IDC_STATIC,106,107,8,8
+    PUSHBUTTON      "Test",IDC_TEST1,270,49,21,14
+    PUSHBUTTON      "Test",IDC_TEST2,270,67,21,14
+    PUSHBUTTON      "Test",IDC_TEST3,270,85,21,14
+    PUSHBUTTON      "Test",IDC_TEST4,270,103,21,14
+    PUSHBUTTON      "Test",IDC_TEST5,270,121,21,14
+    PUSHBUTTON      "Test",IDC_TEST6,270,139,21,14
+    COMBOBOX        IDC_AMPM,145,50,25,30,CBS_DROPDOWN | CBS_SORT | 
+                    WS_VSCROLL | WS_TABSTOP
+    COMBOBOX        IDC_AMPM2,145,68,25,30,CBS_DROPDOWN | CBS_SORT | 
+                    WS_VSCROLL | WS_TABSTOP
+    COMBOBOX        IDC_AMPM3,145,86,25,30,CBS_DROPDOWN | CBS_SORT | 
+                    WS_VSCROLL | WS_TABSTOP
+    COMBOBOX        IDC_AMPM4,145,104,25,30,CBS_DROPDOWN | CBS_SORT | 
+                    WS_VSCROLL | WS_TABSTOP
+    COMBOBOX        IDC_AMPM5,145,122,25,30,CBS_DROPDOWN | CBS_SORT | 
+                    WS_VSCROLL | WS_TABSTOP
+    COMBOBOX        IDC_AMPM6,145,140,25,30,CBS_DROPDOWN | CBS_SORT | 
+                    WS_VSCROLL | WS_TABSTOP
+    LTEXT           "My Notes",IDC_STATIC,14,294,33,8
+    PUSHBUTTON      "Save",IDC_SAVENOTE,104,394,50,14
+    EDITTEXT        IDC_NOTEPAD,14,311,230,75,ES_MULTILINE | ES_AUTOHSCROLL | 
+                    ES_WANTRETURN | WS_VSCROLL
+    PUSHBUTTON      "EXIT",IDC_EXIT,278,394,21,14
+    EDITTEXT        IDC_MON,223,49,17,13,ES_AUTOHSCROLL | ES_NUMBER
+    EDITTEXT        IDC_MON2,223,67,17,13,ES_AUTOHSCROLL | ES_NUMBER
+    EDITTEXT        IDC_MON3,223,85,17,13,ES_AUTOHSCROLL | ES_NUMBER
+    EDITTEXT        IDC_MON6,223,139,17,13,ES_AUTOHSCROLL | ES_NUMBER
+    EDITTEXT        IDC_MON5,223,121,17,13,ES_AUTOHSCROLL | ES_NUMBER
+    EDITTEXT        IDC_MON4,223,103,17,13,ES_AUTOHSCROLL | ES_NUMBER
+    EDITTEXT        IDC_DATE,245,49,17,13,ES_AUTOHSCROLL | ES_NUMBER
+    EDITTEXT        IDC_DATE2,245,67,17,13,ES_AUTOHSCROLL | ES_NUMBER
+    EDITTEXT        IDC_DATE3,245,85,17,13,ES_AUTOHSCROLL | ES_NUMBER
+    EDITTEXT        IDC_DATE6,245,139,17,13,ES_AUTOHSCROLL | ES_NUMBER
+    EDITTEXT        IDC_DATE5,245,121,17,13,ES_AUTOHSCROLL | ES_NUMBER
+    EDITTEXT        IDC_DATE4,245,103,17,13,ES_AUTOHSCROLL | ES_NUMBER
+    LTEXT           "Date",IDC_STATIC,232,34,17,8
+    LTEXT           "Mon  Day",IDC_STATIC,227,41,33,8
+    CONTROL         "",IDC_CHECK1,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,20,
+                    53,8,8
+    CONTROL         "",IDC_CHECK2,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,20,
+                    70,8,8
+    CONTROL         "",IDC_CHECK3,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,20,
+                    89,8,8
+    CONTROL         "",IDC_CHECK4,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,20,
+                    106,8,8
+    CONTROL         "",IDC_CHECK5,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,20,
+                    125,8,8
+    CONTROL         "",IDC_CHECK6,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,20,
+                    143,8,8
+    LTEXT           "Enable",IDC_STATIC,12,38,25,8
+    PUSHBUTTON      "About",IDC_ABOUT,7,394,29,14
+    LTEXT           ":",IDC_STATIC,106,160,8,8
+    EDITTEXT        IDC_HOUR7,88,158,17,13,ES_AUTOHSCROLL | ES_NUMBER
+    EDITTEXT        IDC_MINUTES7,112,158,27,13,ES_AUTOHSCROLL | ES_NUMBER,
+                    WS_EX_TRANSPARENT
+    EDITTEXT        IDC_NAME7,37,158,44,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "Test",IDC_TEST7,270,157,21,14
+    COMBOBOX        IDC_AMPM7,145,158,25,30,CBS_DROPDOWN | CBS_SORT | 
+                    WS_VSCROLL | WS_TABSTOP
+    EDITTEXT        IDC_MON7,223,157,17,13,ES_AUTOHSCROLL | ES_NUMBER
+    EDITTEXT        IDC_DATE7,245,157,17,13,ES_AUTOHSCROLL | ES_NUMBER
+    CONTROL         "",IDC_CHECK7,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,20,
+                    161,8,8
+    LTEXT           ":",IDC_STATIC,106,178,8,8
+    EDITTEXT        IDC_HOUR8,88,176,17,13,ES_AUTOHSCROLL | ES_NUMBER
+    EDITTEXT        IDC_MINUTES8,112,176,27,13,ES_AUTOHSCROLL | ES_NUMBER,
+                    WS_EX_TRANSPARENT
+    EDITTEXT        IDC_NAME8,37,176,44,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "Test",IDC_TEST8,270,175,21,14
+    COMBOBOX        IDC_AMPM8,145,176,25,30,CBS_DROPDOWN | CBS_SORT | 
+                    WS_VSCROLL | WS_TABSTOP
+    EDITTEXT        IDC_MON8,223,175,17,13,ES_AUTOHSCROLL | ES_NUMBER
+    EDITTEXT        IDC_DATE8,245,175,17,13,ES_AUTOHSCROLL | ES_NUMBER
+    CONTROL         "",IDC_CHECK8,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,20,
+                    179,8,8
+    LTEXT           ":",IDC_STATIC,106,196,8,8
+    EDITTEXT        IDC_HOUR9,88,194,17,13,ES_AUTOHSCROLL | ES_NUMBER
+    EDITTEXT        IDC_MINUTES9,112,194,27,13,ES_AUTOHSCROLL | ES_NUMBER,
+                    WS_EX_TRANSPARENT
+    EDITTEXT        IDC_NAME9,37,194,44,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "Test",IDC_TEST9,270,193,21,14
+    COMBOBOX        IDC_AMPM9,145,194,25,30,CBS_DROPDOWN | CBS_SORT | 
+                    WS_VSCROLL | WS_TABSTOP
+    EDITTEXT        IDC_MON9,223,193,17,13,ES_AUTOHSCROLL | ES_NUMBER
+    EDITTEXT        IDC_DATE9,245,193,17,13,ES_AUTOHSCROLL | ES_NUMBER
+    CONTROL         "",IDC_CHECK9,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,20,
+                    197,8,8
+    LTEXT           ":",IDC_STATIC,106,214,8,8
+    EDITTEXT        IDC_HOUR10,88,212,17,13,ES_AUTOHSCROLL | ES_NUMBER
+    EDITTEXT        IDC_MINUTES10,112,212,27,13,ES_AUTOHSCROLL | ES_NUMBER,
+                    WS_EX_TRANSPARENT
+    EDITTEXT        IDC_NAME10,37,212,44,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "Test",IDC_TEST10,270,211,21,14
+    COMBOBOX        IDC_AMPM10,145,212,25,30,CBS_DROPDOWN | CBS_SORT | 
+                    WS_VSCROLL | WS_TABSTOP
+    EDITTEXT        IDC_MON10,223,211,17,13,ES_AUTOHSCROLL | ES_NUMBER
+    EDITTEXT        IDC_DATE10,245,211,17,13,ES_AUTOHSCROLL | ES_NUMBER
+    CONTROL         "",IDC_CHECK10,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,20,
+                    215,8,8
+    LTEXT           ":",IDC_STATIC,106,231,8,8
+    EDITTEXT        IDC_HOUR11,88,230,17,13,ES_AUTOHSCROLL | ES_NUMBER
+    EDITTEXT        IDC_MINUTES11,112,230,27,13,ES_AUTOHSCROLL | ES_NUMBER,
+                    WS_EX_TRANSPARENT
+    EDITTEXT        IDC_NAME11,37,230,44,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "Test",IDC_TEST11,270,229,21,14
+    COMBOBOX        IDC_AMPM11,145,230,25,30,CBS_DROPDOWN | CBS_SORT | 
+                    WS_VSCROLL | WS_TABSTOP
+    EDITTEXT        IDC_MON11,223,229,17,13,ES_AUTOHSCROLL | ES_NUMBER
+    EDITTEXT        IDC_DATE11,245,229,17,13,ES_AUTOHSCROLL | ES_NUMBER
+    CONTROL         "",IDC_CHECK11,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,20,
+                    232,8,8
+    LTEXT           ":",IDC_STATIC,106,250,8,8
+    EDITTEXT        IDC_HOUR12,88,248,17,13,ES_AUTOHSCROLL | ES_NUMBER
+    EDITTEXT        IDC_MINUTES12,112,248,27,13,ES_AUTOHSCROLL | ES_NUMBER,
+                    WS_EX_TRANSPARENT
+    EDITTEXT        IDC_NAME12,37,248,44,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "Test",IDC_TEST12,270,247,21,14
+    COMBOBOX        IDC_AMPM12,145,248,25,30,CBS_DROPDOWN | CBS_SORT | 
+                    WS_VSCROLL | WS_TABSTOP
+    EDITTEXT        IDC_MON12,223,247,17,13,ES_AUTOHSCROLL | ES_NUMBER
+    EDITTEXT        IDC_DATE12,245,247,17,13,ES_AUTOHSCROLL | ES_NUMBER
+    CONTROL         "",IDC_CHECK12,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,20,
+                    251,8,8
+    LTEXT           ":",IDC_STATIC,106,268,8,8
+    EDITTEXT        IDC_HOUR13,88,267,17,13,ES_AUTOHSCROLL | ES_NUMBER
+    EDITTEXT        IDC_MINUTES13,112,267,27,13,ES_AUTOHSCROLL | ES_NUMBER,
+                    WS_EX_TRANSPARENT
+    EDITTEXT        IDC_NAME13,37,267,44,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "Test",IDC_TEST13,270,266,21,14
+    COMBOBOX        IDC_AMPM13,145,267,25,30,CBS_DROPDOWN | CBS_SORT | 
+                    WS_VSCROLL | WS_TABSTOP
+    EDITTEXT        IDC_MON13,223,266,17,13,ES_AUTOHSCROLL | ES_NUMBER
+    EDITTEXT        IDC_DATE13,245,266,17,13,ES_AUTOHSCROLL | ES_NUMBER
+    CONTROL         "",IDC_CHECK13,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,20,
+                    269,8,8
+    COMBOBOX        IDC_DAYS,175,50,39,116,CBS_DROPDOWN | WS_VSCROLL | 
+                    WS_TABSTOP
+    COMBOBOX        IDC_DAYS2,175,68,39,120,CBS_DROPDOWN | WS_VSCROLL | 
+                    WS_TABSTOP
+    COMBOBOX        IDC_DAYS3,175,86,39,120,CBS_DROPDOWN | WS_VSCROLL | 
+                    WS_TABSTOP
+    COMBOBOX        IDC_DAYS4,175,104,39,120,CBS_DROPDOWN | WS_VSCROLL | 
+                    WS_TABSTOP
+    COMBOBOX        IDC_DAYS5,175,122,39,120,CBS_DROPDOWN | WS_VSCROLL | 
+                    WS_TABSTOP
+    COMBOBOX        IDC_DAYS6,175,140,39,143,CBS_DROPDOWN | WS_VSCROLL | 
+                    WS_TABSTOP
+    COMBOBOX        IDC_DAYS7,175,158,39,130,CBS_DROPDOWN | WS_VSCROLL | 
+                    WS_TABSTOP
+    COMBOBOX        IDC_DAYS8,175,176,39,127,CBS_DROPDOWN | WS_VSCROLL | 
+                    WS_TABSTOP
+    COMBOBOX        IDC_DAYS9,175,194,39,117,CBS_DROPDOWN | WS_VSCROLL | 
+                    WS_TABSTOP
+    COMBOBOX        IDC_DAYS10,175,212,39,103,CBS_DROPDOWN | WS_VSCROLL | 
+                    WS_TABSTOP
+    COMBOBOX        IDC_DAYS11,175,230,39,101,CBS_DROPDOWN | WS_VSCROLL | 
+                    WS_TABSTOP
+    COMBOBOX        IDC_DAYS12,175,248,39,92,CBS_DROPDOWN | WS_VSCROLL | 
+                    WS_TABSTOP
+    COMBOBOX        IDC_DAYS13,175,267,39,84,CBS_DROPDOWN | WS_VSCROLL | 
+                    WS_TABSTOP
+END
+
+
+#ifndef _MAC
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,2,0,0
+ PRODUCTVERSION 1,2,0,0
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904b0"
+        BEGIN
+            VALUE "Comments", "http://bmx3r.com\0"
+            VALUE "CompanyName", "Made by ELY M.\0"
+            VALUE "FileDescription", "MyDigClock Reminder\0"
+            VALUE "FileVersion", "1, 2, 0, 0\0"
+            VALUE "InternalName", "MyDigClock Reminder\0"
+            VALUE "LegalCopyright", "Copyright (C) 2005\0"
+            VALUE "LegalTrademarks", "Made by ELY M.\0"
+            VALUE "OriginalFilename", "MyDigClock.exe\0"
+            VALUE "PrivateBuild", "\0"
+            VALUE "ProductName", "MyDigClock Reminder\0"
+            VALUE "ProductVersion", "1, 2, 0, 0\0"
+            VALUE "SpecialBuild", "\0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1200
+    END
+END
+
+#endif    // !_MAC
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO DISCARDABLE 
+BEGIN
+    IDD_ABOUTBOX, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 153
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 85
+    END
+
+    IDD_MYDIGCLOCK_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 299
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 408
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_SYSTRAY MENU DISCARDABLE 
+BEGIN
+    POPUP "systray"
+    BEGIN
+        MENUITEM "About",                       ID_ABOUT
+        MENUITEM "Open",                        ID_OPEN
+        MENUITEM "Exit",                        ID_EXIT
+        MENUITEM "Close Menu",                  ID_CLOSEMENU
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog Info
+//
+
+IDD_MYDIGCLOCK_DIALOG DLGINIT
+BEGIN
+    IDC_AMPM, 0x403, 3, 0
+0x4d41, "\000" 
+    IDC_AMPM, 0x403, 3, 0
+0x4d50, "\000" 
+    IDC_AMPM2, 0x403, 3, 0
+0x4d41, "\000" 
+    IDC_AMPM2, 0x403, 3, 0
+0x4d50, "\000" 
+    IDC_AMPM3, 0x403, 3, 0
+0x4d41, "\000" 
+    IDC_AMPM3, 0x403, 3, 0
+0x4d50, "\000" 
+    IDC_AMPM4, 0x403, 3, 0
+0x4d41, "\000" 
+    IDC_AMPM4, 0x403, 3, 0
+0x4d50, "\000" 
+    IDC_AMPM5, 0x403, 3, 0
+0x4d41, "\000" 
+    IDC_AMPM5, 0x403, 3, 0
+0x4d50, "\000" 
+    IDC_AMPM6, 0x403, 3, 0
+0x4d41, "\000" 
+    IDC_AMPM6, 0x403, 3, 0
+0x4d50, "\000" 
+    IDC_AMPM7, 0x403, 3, 0
+0x4d41, "\000" 
+    IDC_AMPM7, 0x403, 3, 0
+0x4d50, "\000" 
+    IDC_AMPM8, 0x403, 3, 0
+0x4d41, "\000" 
+    IDC_AMPM8, 0x403, 3, 0
+0x4d50, "\000" 
+    IDC_AMPM9, 0x403, 3, 0
+0x4d41, "\000" 
+    IDC_AMPM9, 0x403, 3, 0
+0x4d50, "\000" 
+    IDC_AMPM10, 0x403, 3, 0
+0x4d41, "\000" 
+    IDC_AMPM10, 0x403, 3, 0
+0x4d50, "\000" 
+    IDC_AMPM11, 0x403, 3, 0
+0x4d41, "\000" 
+    IDC_AMPM11, 0x403, 3, 0
+0x4d50, "\000" 
+    IDC_AMPM12, 0x403, 3, 0
+0x4d41, "\000" 
+    IDC_AMPM12, 0x403, 3, 0
+0x4d50, "\000" 
+    IDC_AMPM13, 0x403, 3, 0
+0x4d41, "\000" 
+    IDC_AMPM13, 0x403, 3, 0
+0x4d50, "\000" 
+    IDC_DAYS, 0x403, 1, 0
+"\000" 
+    IDC_DAYS, 0x403, 9, 0
+0x7645, 0x7265, 0x6479, 0x7961, "\000" 
+    IDC_DAYS, 0x403, 4, 0
+0x7553, 0x006e, 
+    IDC_DAYS, 0x403, 4, 0
+0x6f4d, 0x006e, 
+    IDC_DAYS, 0x403, 5, 0
+0x7554, 0x7365, "\000" 
+    IDC_DAYS, 0x403, 4, 0
+0x6557, 0x0064, 
+    IDC_DAYS, 0x403, 6, 0
+0x6854, 0x7275, 0x0073, 
+    IDC_DAYS, 0x403, 4, 0
+0x7246, 0x0069, 
+    IDC_DAYS, 0x403, 4, 0
+0x6153, 0x0074, 
+    IDC_DAYS2, 0x403, 1, 0
+"\000" 
+    IDC_DAYS2, 0x403, 9, 0
+0x7645, 0x7265, 0x6479, 0x7961, "\000" 
+    IDC_DAYS2, 0x403, 4, 0
+0x7553, 0x006e, 
+    IDC_DAYS2, 0x403, 4, 0
+0x6f4d, 0x006e, 
+    IDC_DAYS2, 0x403, 5, 0
+0x7554, 0x7365, "\000" 
+    IDC_DAYS2, 0x403, 4, 0
+0x6557, 0x0064, 
+    IDC_DAYS2, 0x403, 6, 0
+0x6854, 0x7275, 0x0073, 
+    IDC_DAYS2, 0x403, 4, 0
+0x7246, 0x0069, 
+    IDC_DAYS2, 0x403, 4, 0
+0x6153, 0x0074, 
+    IDC_DAYS3, 0x403, 1, 0
+"\000" 
+    IDC_DAYS3, 0x403, 9, 0
+0x7645, 0x7265, 0x6479, 0x7961, "\000" 
+    IDC_DAYS3, 0x403, 4, 0
+0x7553, 0x006e, 
+    IDC_DAYS3, 0x403, 4, 0
+0x6f4d, 0x006e, 
+    IDC_DAYS3, 0x403, 5, 0
+0x7554, 0x7365, "\000" 
+    IDC_DAYS3, 0x403, 4, 0
+0x6557, 0x0064, 
+    IDC_DAYS3, 0x403, 6, 0
+0x6854, 0x7275, 0x0073, 
+    IDC_DAYS3, 0x403, 4, 0
+0x7246, 0x0069, 
+    IDC_DAYS3, 0x403, 4, 0
+0x6153, 0x0074, 
+    IDC_DAYS4, 0x403, 1, 0
+"\000" 
+    IDC_DAYS4, 0x403, 9, 0
+0x7645, 0x7265, 0x6479, 0x7961, "\000" 
+    IDC_DAYS4, 0x403, 4, 0
+0x7553, 0x006e, 
+    IDC_DAYS4, 0x403, 4, 0
+0x6f4d, 0x006e, 
+    IDC_DAYS4, 0x403, 5, 0
+0x7554, 0x7365, "\000" 
+    IDC_DAYS4, 0x403, 4, 0
+0x6557, 0x0064, 
+    IDC_DAYS4, 0x403, 6, 0
+0x6854, 0x7275, 0x0073, 
+    IDC_DAYS4, 0x403, 4, 0
+0x7246, 0x0069, 
+    IDC_DAYS4, 0x403, 4, 0
+0x6153, 0x0074, 
+    IDC_DAYS5, 0x403, 1, 0
+"\000" 
+    IDC_DAYS5, 0x403, 9, 0
+0x7645, 0x7265, 0x6479, 0x7961, "\000" 
+    IDC_DAYS5, 0x403, 4, 0
+0x7553, 0x006e, 
+    IDC_DAYS5, 0x403, 4, 0
+0x6f4d, 0x006e, 
+    IDC_DAYS5, 0x403, 5, 0
+0x7554, 0x7365, "\000" 
+    IDC_DAYS5, 0x403, 4, 0
+0x6557, 0x0064, 
+    IDC_DAYS5, 0x403, 6, 0
+0x6854, 0x7275, 0x0073, 
+    IDC_DAYS5, 0x403, 4, 0
+0x7246, 0x0069, 
+    IDC_DAYS5, 0x403, 4, 0
+0x6153, 0x0074, 
+    IDC_DAYS6, 0x403, 1, 0
+"\000" 
+    IDC_DAYS6, 0x403, 9, 0
+0x7645, 0x7265, 0x6479, 0x7961, "\000" 
+    IDC_DAYS6, 0x403, 4, 0
+0x7553, 0x006e, 
+    IDC_DAYS6, 0x403, 4, 0
+0x6f4d, 0x006e, 
+    IDC_DAYS6, 0x403, 5, 0
+0x7554, 0x7365, "\000" 
+    IDC_DAYS6, 0x403, 4, 0
+0x6557, 0x0064, 
+    IDC_DAYS6, 0x403, 6, 0
+0x6854, 0x7275, 0x0073, 
+    IDC_DAYS6, 0x403, 4, 0
+0x7246, 0x0069, 
+    IDC_DAYS6, 0x403, 4, 0
+0x6153, 0x0074, 
+    IDC_DAYS7, 0x403, 1, 0
+"\000" 
+    IDC_DAYS7, 0x403, 9, 0
+0x7645, 0x7265, 0x6479, 0x7961, "\000" 
+    IDC_DAYS7, 0x403, 4, 0
+0x7553, 0x006e, 
+    IDC_DAYS7, 0x403, 4, 0
+0x6f4d, 0x006e, 
+    IDC_DAYS7, 0x403, 5, 0
+0x7554, 0x7365, "\000" 
+    IDC_DAYS7, 0x403, 4, 0
+0x6557, 0x0064, 
+    IDC_DAYS7, 0x403, 6, 0
+0x6854, 0x7275, 0x0073, 
+    IDC_DAYS7, 0x403, 4, 0
+0x7246, 0x0069, 
+    IDC_DAYS7, 0x403, 4, 0
+0x6153, 0x0074, 
+    IDC_DAYS8, 0x403, 1, 0
+"\000" 
+    IDC_DAYS8, 0x403, 9, 0
+0x7645, 0x7265, 0x6479, 0x7961, "\000" 
+    IDC_DAYS8, 0x403, 4, 0
+0x7553, 0x006e, 
+    IDC_DAYS8, 0x403, 4, 0
+0x6f4d, 0x006e, 
+    IDC_DAYS8, 0x403, 5, 0
+0x7554, 0x7365, "\000" 
+    IDC_DAYS8, 0x403, 4, 0
+0x6557, 0x0064, 
+    IDC_DAYS8, 0x403, 6, 0
+0x6854, 0x7275, 0x0073, 
+    IDC_DAYS8, 0x403, 4, 0
+0x7246, 0x0069, 
+    IDC_DAYS8, 0x403, 4, 0
+0x6153, 0x0074, 
+    IDC_DAYS9, 0x403, 1, 0
+"\000" 
+    IDC_DAYS9, 0x403, 9, 0
+0x7645, 0x7265, 0x6479, 0x7961, "\000" 
+    IDC_DAYS9, 0x403, 4, 0
+0x7553, 0x006e, 
+    IDC_DAYS9, 0x403, 4, 0
+0x6f4d, 0x006e, 
+    IDC_DAYS9, 0x403, 5, 0
+0x7554, 0x7365, "\000" 
+    IDC_DAYS9, 0x403, 4, 0
+0x6557, 0x0064, 
+    IDC_DAYS9, 0x403, 6, 0
+0x6854, 0x7275, 0x0073, 
+    IDC_DAYS9, 0x403, 4, 0
+0x7246, 0x0069, 
+    IDC_DAYS9, 0x403, 4, 0
+0x6153, 0x0074, 
+    IDC_DAYS10, 0x403, 1, 0
+"\000" 
+    IDC_DAYS10, 0x403, 9, 0
+0x7645, 0x7265, 0x6479, 0x7961, "\000" 
+    IDC_DAYS10, 0x403, 4, 0
+0x7553, 0x006e, 
+    IDC_DAYS10, 0x403, 4, 0
+0x6f4d, 0x006e, 
+    IDC_DAYS10, 0x403, 5, 0
+0x7554, 0x7365, "\000" 
+    IDC_DAYS10, 0x403, 4, 0
+0x6557, 0x0064, 
+    IDC_DAYS10, 0x403, 6, 0
+0x6854, 0x7275, 0x0073, 
+    IDC_DAYS10, 0x403, 4, 0
+0x7246, 0x0069, 
+    IDC_DAYS10, 0x403, 4, 0
+0x6153, 0x0074, 
+    IDC_DAYS11, 0x403, 1, 0
+"\000" 
+    IDC_DAYS11, 0x403, 9, 0
+0x7645, 0x7265, 0x6479, 0x7961, "\000" 
+    IDC_DAYS11, 0x403, 4, 0
+0x7553, 0x006e, 
+    IDC_DAYS11, 0x403, 4, 0
+0x6f4d, 0x006e, 
+    IDC_DAYS11, 0x403, 5, 0
+0x7554, 0x7365, "\000" 
+    IDC_DAYS11, 0x403, 4, 0
+0x6557, 0x0064, 
+    IDC_DAYS11, 0x403, 6, 0
+0x6854, 0x7275, 0x0073, 
+    IDC_DAYS11, 0x403, 4, 0
+0x7246, 0x0069, 
+    IDC_DAYS11, 0x403, 4, 0
+0x6153, 0x0074, 
+    IDC_DAYS12, 0x403, 1, 0
+"\000" 
+    IDC_DAYS12, 0x403, 9, 0
+0x7645, 0x7265, 0x6479, 0x7961, "\000" 
+    IDC_DAYS12, 0x403, 4, 0
+0x7553, 0x006e, 
+    IDC_DAYS12, 0x403, 4, 0
+0x6f4d, 0x006e, 
+    IDC_DAYS12, 0x403, 5, 0
+0x7554, 0x7365, "\000" 
+    IDC_DAYS12, 0x403, 4, 0
+0x6557, 0x0064, 
+    IDC_DAYS12, 0x403, 6, 0
+0x6854, 0x7275, 0x0073, 
+    IDC_DAYS12, 0x403, 4, 0
+0x7246, 0x0069, 
+    IDC_DAYS12, 0x403, 4, 0
+0x6153, 0x0074, 
+    IDC_DAYS13, 0x403, 1, 0
+"\000" 
+    IDC_DAYS13, 0x403, 9, 0
+0x7645, 0x7265, 0x6479, 0x7961, "\000" 
+    IDC_DAYS13, 0x403, 4, 0
+0x7553, 0x006e, 
+    IDC_DAYS13, 0x403, 4, 0
+0x6f4d, 0x006e, 
+    IDC_DAYS13, 0x403, 5, 0
+0x7554, 0x7365, "\000" 
+    IDC_DAYS13, 0x403, 4, 0
+0x6557, 0x0064, 
+    IDC_DAYS13, 0x403, 6, 0
+0x6854, 0x7275, 0x0073, 
+    IDC_DAYS13, 0x403, 4, 0
+0x7246, 0x0069, 
+    IDC_DAYS13, 0x403, 4, 0
+0x6153, 0x0074, 
+    0
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_ABOUTBOX            "&About MyDigClock..."
+    IDP_SOCKETS_INIT_FAILED "Windows sockets initialization failed."
+END
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE 9, 1
+#pragma code_page(1252)
+#endif //_WIN32
+#include "res\MyDigClock.rc2"  // non-Microsoft Visual C++ edited resources
+#include "afxres.rc"         // Standard components
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+
