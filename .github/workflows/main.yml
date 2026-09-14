@@ -26,7 +26,7 @@ jobs:
       working-directory: ${{env.GITHUB_WORKSPACE}}
       # Add additional options to the MSBuild command line here (like platform or verbosity level).
       # See https://docs.microsoft.com/visualstudio/msbuild/msbuild-command-line-reference
-      run: msbuild /m /p:Configuration=Release MyDigClock.slnx /p:Platform="Any CPU" /t:Publish
+      run: msbuild /m /p:Configuration=Release MyDigClock.slnx /p:Platform=x86 /t:Publish
 
     - name: Show Github infos
       run:  echo 'Workspace path ${{ github.workspace }} - runner.temp ${{ runner.temp }}'     
