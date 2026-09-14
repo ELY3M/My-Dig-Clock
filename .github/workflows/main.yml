@@ -44,18 +44,15 @@ jobs:
         release_name: ${{ steps.version.outputs.version }}
         tag_name: ${{ github.run_number }}
         body: ${{ github.event.head_commit.message }}
-
-    # - name: Zipping up Release folder
-      # run: 7z a release.zip "${{ github.workspace }}\ACNHPokerCore\bin\Release\${{ steps.netversion.outputs.netversion }}\win-x64\publish\"
             
-    # - name: Upload Release
-      # uses: softprops/action-gh-release@v2
-      # with:
-        # draft: false
-        # prerelease: false    
-        # tag_name: ${{ github.run_number }}
-        # body: ${{ github.event.head_commit.message }}
-        # files: ${{ github.workspace }}\release.zip
-      # env:
-        # GITHUB_TOKEN: ${{ github.token }} 
+    - name: Upload Release
+      uses: softprops/action-gh-release@v2
+      with:
+        draft: false
+        prerelease: false    
+        tag_name: ${{ github.run_number }}
+        body: ${{ github.event.head_commit.message }}
+        files: ${{ github.workspace }}\Release\MyDigClock.exe
+      env:
+        GITHUB_TOKEN: ${{ github.token }} 
         
