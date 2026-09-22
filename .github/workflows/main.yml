@@ -41,7 +41,24 @@ jobs:
           TZ: "America/Chicago"
         run: | 
           echo "NOW=$(date +'%m-%d-%Y-%I.%M.%S.%p')" >> $GITHUB_ENV   
-              
+
+      - name: Put current date into a variable
+        run: |
+          $NOW=& Get-Date -format M-dd-yy-
+          echo "NOW=$NOW" >> $env:GITHUB_ENV
+
+      - name: Get current time
+        id: now
+        uses: josStorer/get-current-time@v2
+        with:
+          timezone: "America/Chicago"
+          format: M-D-YY-hh.mm.ss.A
+          
+      - name: save time 
+        run: | 
+          echo "NOW=${{ steps.now.outputs.time }}" >> $GITHUB_ENV           
+
+    
       - name: Upload Release
         uses: softprops/action-gh-release@v2
         with:
