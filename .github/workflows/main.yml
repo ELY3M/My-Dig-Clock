@@ -36,13 +36,6 @@ jobs:
       - name: list all dirs 
         run: ls -R
         
-      - name: get date/date 
-        env:
-          TZ: "America/Chicago"
-        run: | 
-          echo "NOW=$(date +'%m-%d-%Y-%I.%M.%S.%p')" >> $env:GITHUB_ENV
-                
-                
       - name: Get current time
         id: now
         uses: josStorer/get-current-time@v2
@@ -59,5 +52,3 @@ jobs:
           body: ${{ github.event.head_commit.message }}
           files: ${{ github.workspace }}\Release\MyDigClock.exe
           name: "Release ${{ steps.now.outputs.formattedTime }}"
-          
-          
