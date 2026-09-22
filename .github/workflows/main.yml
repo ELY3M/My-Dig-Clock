@@ -36,18 +36,13 @@ jobs:
       - name: list all dirs 
         run: ls -R
         
-      # - name: get date/date 
-        # env:
-          # TZ: "America/Chicago"
-        # run: | 
-          # echo "NOW=$(date +'%m-%d-%Y-%I.%M.%S.%p')" >> $GITHUB_ENV   
-
-      # - name: get date/date 
-        # run: |
-          # $NOW=& Get-Date -format M-D-YY-hh.mm.ss.A
-          # echo "NOW=$NOW" >> $env:GITHUB_ENV
-          
-
+      - name: get date/date 
+        env:
+          TZ: "America/Chicago"
+        run: | 
+          echo "NOW=$(date +'%m-%d-%Y-%I.%M.%S.%p')" >> $env:GITHUB_ENV
+                
+                
       - name: Get current time
         id: now
         uses: josStorer/get-current-time@v2
@@ -55,18 +50,14 @@ jobs:
           timezone: "America/Chicago"
           format: M-D-YY-hh.mm.ss.A
           
-      - name: save time 
-        run: | 
-          echo "NOW=${{ steps.now.outputs.formattedTime }}" >> $GITHUB_ENV           
-
-    
       - name: Upload Release
         uses: softprops/action-gh-release@v2
         with:
           draft: false
           prerelease: false    
-          tag_name: ${{ env.NOW }}
+          tag_name: ${{ steps.now.outputs.formattedTime }}
           body: ${{ github.event.head_commit.message }}
           files: ${{ github.workspace }}\Release\MyDigClock.exe
-          name: "Release ${{ env.NOW }}"
+          name: "Release ${{ steps.now.outputs.formattedTime }}"
+          
           
