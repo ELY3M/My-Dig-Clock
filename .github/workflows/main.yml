@@ -15,46 +15,40 @@ jobs:
     runs-on: windows-latest
 
     steps:
-    - uses: actions/checkout@v4
-
-    - name: Add MSBuild to PATH
-      uses: microsoft/setup-msbuild@v1
-
-    # - name: Restore NuGet packages
-      # working-directory: ${{env.GITHUB_WORKSPACE}}
-      # run: nuget restore ${{env.SOLUTION_FILE_PATH}}
-
-    - name: Build
-      working-directory: ${{env.GITHUB_WORKSPACE}}
-      # Add additional options to the MSBuild command line here (like platform or verbosity level).
-      # See https://docs.microsoft.com/visualstudio/msbuild/msbuild-command-line-reference
-      run: msbuild /m /p:Configuration=Release MyDigClock.slnx /t:Build
-
-    - name: Show Github infos
-      run:  echo 'Workspace path ${{ github.workspace }} - runner.temp ${{ runner.temp }}'     
-               
-    - name: list all dirs 
-      run: ls -R
-      
-    - name: Create Release
-      uses: actions/create-release@latest
-      env:
-        GITHUB_TOKEN: ${{ github.token }} 
-      with:
-        draft: false
-        prerelease: false
-        release_name: ${{ steps.version.outputs.version }}
-        tag_name: ${{ github.run_number }}
-        body: ${{ github.event.head_commit.message }}
-            
-    - name: Upload Release
-      uses: softprops/action-gh-release@v2
-      with:
-        draft: false
-        prerelease: false    
-        tag_name: ${{ github.run_number }}
-        body: ${{ github.event.head_commit.message }}
-        files: ${{ github.workspace }}\Release\MyDigClock.exe
-      env:
-        GITHUB_TOKEN: ${{ github.token }} 
+      - uses: actions/checkout@v7
+     
+      - name: Add MSBuild to PATH
+        uses: microsoft/setup-msbuild@v1
+     
+      # - name: Restore NuGet packages
+        # working-directory: ${{env.GITHUB_WORKSPACE}}
+        # run: nuget restore ${{env.SOLUTION_FILE_PATH}}
+     
+      - name: Build
+        working-directory: ${{env.GITHUB_WORKSPACE}}
+        # Add additional options to the MSBuild command line here (like platform or verbosity level).
+        # See https://docs.microsoft.com/visualstudio/msbuild/msbuild-command-line-reference
+        run: msbuild /m /p:Configuration=Release MyDigClock.slnx /t:Build
+     
+      - name: Show Github infos
+        run:  echo 'Workspace path ${{ github.workspace }} - runner.temp ${{ runner.temp }}'     
+                 
+      - name: list all dirs 
+        run: ls -R
         
+      - name: get date/date 
+        env:
+          TZ: "America/Chicago"
+        run: | 
+          echo "NOW=$(date +'%m-%d-%Y-%I.%M.%S.%p')" >> $GITHUB_ENV   
+              
+      - name: Upload Release
+        uses: softprops/action-gh-release@v2
+        with:
+          draft: false
+          prerelease: false    
+          tag_name: ${{ env.NOW }}
+          body: ${{ github.event.head_commit.message }}
+          files: ${{ github.workspace }}\Release\MyDigClock.exe
+          name: "Release ${{ env.NOW }}"
+          
