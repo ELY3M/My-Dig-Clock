@@ -42,22 +42,22 @@ jobs:
         # run: | 
           # echo "NOW=$(date +'%m-%d-%Y-%I.%M.%S.%p')" >> $GITHUB_ENV   
 
-      - name: get date/date 
-        run: |
-          $NOW=& Get-Date -format M-D-YY-hh.mm.ss.A
-          echo "NOW=$NOW" >> $env:GITHUB_ENV
+      # - name: get date/date 
+        # run: |
+          # $NOW=& Get-Date -format M-D-YY-hh.mm.ss.A
+          # echo "NOW=$NOW" >> $env:GITHUB_ENV
           
 
-      # - name: Get current time
-        # id: now
-        # uses: josStorer/get-current-time@v2
-        # with:
-          # timezone: "America/Chicago"
-          # format: M-D-YY-hh.mm.ss.A
+      - name: Get current time
+        id: now
+        uses: josStorer/get-current-time@v2
+        with:
+          timezone: "America/Chicago"
+          format: M-D-YY-hh.mm.ss.A
           
-      # - name: save time 
-        # run: | 
-          # echo "NOW=${{ steps.now.outputs.formattedTime }}" >> $GITHUB_ENV           
+      - name: save time 
+        run: | 
+          echo "NOW=${{ steps.now.outputs.formattedTime }}" >> $GITHUB_ENV           
 
     
       - name: Upload Release
